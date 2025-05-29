@@ -1,0 +1,24 @@
+. {
+  font-family: helvetica, sans-serif;
+}
+.menu, footer{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #625B5B;
+  color: white;
+  font-size: 30px;
+  margin-inline: 20px;
+  .menu-button {
+    font: bold 16px helvetica, sans-serif;
+    background-color: #EAEAEA;
+    color: #625B5B;
+    border-radius: 20px;
+    margin-inside: 10px;
+    margin-outside: 50px;
+  }
+    .menu-button:hover {
+        background-color: #625B5B;
+        color: #EAEAEA;
+        border: 1px solid #EAEAEA;
+    }
+}
