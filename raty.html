@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kursy komputerowe</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function obliczRate() {
+            const liczbaRat = parseInt(document.getElementById("raty").value);
+            if (isNaN(liczbaRat) || liczbaRat <= 0) {
+                document.getElementById("wynik").textContent = "Podaj prawidłową liczbę rat.";
+                return;
+            }
+
+            let suma = 0;
+            if (document.getElementById("react").checked) suma += 2000;
+            if (document.getElementById("js").checked) suma += 1500;
+
+            const rata = (suma / liczbaRat).toFixed(2);
+            document.getElementById("wynik").textContent = `Miesięczna rata: ${rata} zł`;
+        }
+    </script>
+</head>
+<body>
+<main>
+    <h3>Oblicz miesięczną ratę</h3>
+    <div>
+        <label><input type="checkbox" class="kontrolki" id="react"> Kurs React.js</label><br>
+        <label><input type="checkbox" class="kontrolki" id="js"> Kurs JavaScript</label><br>
+        <label>Liczba rat: <input type="number" class="kontrolki" id="raty"></label><br>
+        <label>Miasto:
+            <select class="kontrolki">
+                <option>Warszawa</option>
+                <option>Katowice</option>
+                <option>Gdańsk</option>
+            </select>
+        </label><br>
+        <button class="kontrolki" onclick="obliczRate()">Oblicz</button>
+    </div>
+    <p id="wynik"></p>
+</main>
+
+<footer>
+    <p>Autor strony: 123456</p>
+</footer>
+</body>
+</html>

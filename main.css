@@ -7,7 +7,8 @@
   background-color: #625B5B;
   color: white;
   font-size: 30px;
-  margin-inline: 20px;
+  margin-inside: 20px;
+  height: 40px;
   .menu-button {
     font: bold 16px helvetica, sans-serif;
     background-color: #EAEAEA;
@@ -15,10 +16,48 @@
     border-radius: 20px;
     margin-inside: 10px;
     margin-outside: 50px;
+    a{
+      color: #625B5B;
+    }
+    a.active{
+      color: white;
+      background-color: #EAEAEA;
+    }
+    a.hover{
+      color: white;
+      background-color: #EAEAEA;
+    }
   }
     .menu-button:hover {
-        background-color: #625B5B;
-        color: #EAEAEA;
-        border: 1px solid #EAEAEA;
+      background-color: #625B5B;
+      color: #EAEAEA;
+      border: 1px solid #EAEAEA;
     }
+}
+
+.kursy-komputerowe {
+  font-size: 20px;
+  table{
+    border: 1px dashed #625B5B;
+    width: 60%;
+    margin-left: 40px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+}
+
+.kontakt {
+  font-size: 20px;
+  max-width: 90vh;
+  .ul {
+    list-style-type: circle;
+    margin-inline-start: 40px;
+  }
+}
+
+footer {
+  min-height: 12vh;
+  display: flex;
+  align-items: center;
+  margin-top: 27.5vh;
 }
